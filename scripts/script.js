@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
+const filmImages = document.querySelectorAll('.film img');
 // const smooth = ScrollSmoother.create({
 //     wrapper:'#smooth-wrapper',
 //     content:'.smooth-content',
@@ -25,7 +26,7 @@ let tl = gsap.timeline({
     scrollTrigger:{
         trigger:'#hero',
         start: 'top top',
-        end:'90% bottom',
+        end:'100% bottom',
         pin:true,
         pinSpacing:false,
         // markers:true,
@@ -35,7 +36,7 @@ let tl = gsap.timeline({
     }
 })
 tl.to('.hero-scroll-text',{
-    left:'-150%',
+    left:'-160%',
     ease:'none',
 })
 tl.to('.red',{
@@ -54,7 +55,7 @@ tl.to('.b-two',{
 tl.to('.one',{
     top:'38%',
     left:'+=20px',
-    zIndex:'1',
+    // zIndex:'1',
     scale:'.8',
     ease:'none'
 },'<')
@@ -73,11 +74,28 @@ let tl2 = gsap.timeline({
         markers:true,
     }
 })
-tl2.to('.f-one',{
+tl2.to('#hero',{
     opacity:'0',
 })
 
 tl2.from('#second h2',{
     opacity:'0',
-    x:50,
+    y:150,
 },'<')
+
+
+filmImages.forEach(film=>{
+    gsap.from(film,{
+        objectPosition:'50% 20%',
+        opacity:'.8',
+        scale:'.95',
+        scrollTrigger:{
+            trigger:film,
+            start:'-70% 20%',
+            end: 'bottom top',
+            scrub:true,
+            ease:'none',
+            // markers:true
+        }
+    })
+})
