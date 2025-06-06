@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    font-family: 'cool';
+    color:white;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'cool cond';
+    src: url('../fonts/coolvetica-2/coolvetica\ condensed\ rg.ttf');
+}
+@font-face {
+    font-family: 'cool';
+    src: url('../fonts/coolvetica-2/coolvetica\ rg.ttf');
+}
+@font-face {
+    font-family: 'cool slim';
+    src: url('../fonts/coolvetica-2/coolvetica\ crammed\ rg.ttf');
+}
+.hero-scroll-text,h1{
+    font-size: 460px;
+    font-family: 'cool cond';
+    width: 200%;
+    letter-spacing: 20px;
+}
+.hero-scroll-text{
+    position: absolute;
+    left:50%;
+    top:10%;
+    z-index: 2;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+nav{
+    width: 100%;
+    background: black;
+    padding: 1rem;
+    position: fixed;
+    top:0;
+    z-index: 10;
+    /* height: 10vh; */
+}
+.nav-bar{
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 100px;
+    height: 80px;
+    position: relative;
+}
+.logo img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.nav-bar ul{
+    display: flex;
+    gap:20px;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+button{
+    width: 150px;
+    height: 50px;
+    padding: .5rem;
+    color:white;
+    background: red;
+    border:0px solid black;
+    margin:20px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s ease;
+    border-radius: 10px;
+    color:black;
+    position: relative;
+    z-index: 5;
+}
+button:hover{
+border:1px solid white;
+color: white;
+}
+section{
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    padding: 1rem;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+#hero{
+    height: 200vh;
+}
+#hero img{
+    width: 200px;
+    height: 210px;
+    /* background: white; */
+    position: absolute;
+    border:none;
+    object-fit: cover;
+}
+.behind{
+    z-index: 1;
+}
+.b-one{
+    top:30%;
+    left:15%;
+    background: red!important;
+    width: 300px!important;
+}
+.b-two{
+    left:35%;
+    top:45%;
+    background: green!important;
+    height: 300px!important;
+    /* width: 400px!important; */
+}
+.front{
+    z-index: 3;
+}
+.one{
+    top:5%;
+    left:1%;
+    background: aqua;
+    width: 250px!important;
+    height: 300px!important;
+}
+.two{
+    top:35%;
+    left:75%;
+    background: teal;
+    height:350px!important;
+    width: 250px!important;
+}
+
+#second{
+    z-index: 4;
+   /* background: wheat;  */
+}
+#second h2{
+    width: 55%;
+    margin: auto;
+    opacity: 1;
+    font-weight: 400;
+}
+
+/* film section  */
+#film{
+    height: 100%;
+}
+.film-holder{
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    gap:20px;
+}
+.film{
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border:2px solid red;
+    /* border-radius: 10px; */
+    margin: auto;
+}
+.film img{
+position: absolute;
+width: 98%;
+height: 100%;
+object-fit: cover;
+object-position: center 25%;
+}
+.film h2{
+    color:white;
+    position: relative;
+    z-index: 3;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-family: 'cool';
+    font-weight: 100;
+}
+.film h3{
+    color:white;
+    position: absolute;
+    z-index: 3;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-family: 'cool cond';
+    font-weight: 100;
+    top:3%;
+    right:3%
+}
