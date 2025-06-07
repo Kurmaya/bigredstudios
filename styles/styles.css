@@ -108,9 +108,12 @@ section{
     padding: 1rem;
 }
 .section-heading{
-    font-size: 3rem;
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    font-family: 'cool cond';
     text-align: center;
     margin: 40px auto;
+    text-transform: uppercase;
 }
 .wrapper{
     width: 100%;
@@ -238,6 +241,9 @@ object-position: 50% 25%;
     justify-content: center;
     align-items: center;
     /* gap:20px 0; */
+}
+.red{
+    /* color:rgba(150,0,0,1); */
 }
 .service{
     grid-template-columns: repeat(2,1fr);

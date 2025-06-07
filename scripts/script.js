@@ -69,10 +69,10 @@ tl.to('.f-two',{
 let tl2 = gsap.timeline({
     scrollTrigger:{
         tigger:'#second',
-        start:'15% top',
-        end: '20% top',
+        start:'20% top',
+        end: '23% top',
         scrub:'true',
-        markers:true,
+        // markers:true,
     }
 })
 tl2.to('#hero',{
@@ -81,7 +81,7 @@ tl2.to('#hero',{
 
 tl2.from('#second h2',{
     opacity:'0',
-    y:100,
+    y:150,
 },'<')
 
 
