@@ -107,6 +107,11 @@ section{
     margin: auto;
     padding: 1rem;
 }
+.section-heading{
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px auto;
+}
 .wrapper{
     width: 100%;
     height: 100%;
@@ -170,7 +175,7 @@ section{
 }
 
 /* film section  */
-#film{
+#films{
     height: 100%;
 }
 .film-holder{
@@ -222,4 +227,65 @@ object-position: 50% 25%;
     position: absolute;
     top:65%;
     transform: translateY(-65%);
+}
+
+/* services section */
+#services{
+    height: 100%;
+}
+.services-holder{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap:20px 0; */
+}
+.service{
+    grid-template-columns: repeat(2,1fr);
+    gap:10px 0;
+}
+.left,.right{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 500px;
+    max-height: 500px;
+    text-align: left;
+    position: relative;
+}
+.left img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right{
+    padding:2rem;
+    gap:20px;
+    background: #29252c;
+}
+.right h2{
+font-family: 'cool';
+letter-spacing: 2px;
+font-size: 4rem;
+text-align: left;
+}
+.right h4{
+    font-size: 2rem;
+    width: 80%;
+    font-weight: 100;
+}
+.right ul {
+    display: flex;
+    gap:20px;
+    margin-top:40px;
+}
+.right ul li{
+    background: #222222;
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    font-weight: 100;
+    padding:.5rem .8rem;
+    color:#adadad;
 }

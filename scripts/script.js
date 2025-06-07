@@ -31,6 +31,7 @@ let tl = gsap.timeline({
         pinSpacing:false,
         // markers:true,
         scrub: true,
+        ease:'power1.out'
 
 
     }
@@ -68,8 +69,8 @@ tl.to('.f-two',{
 let tl2 = gsap.timeline({
     scrollTrigger:{
         tigger:'#second',
-        start:'25% top',
-        end: 'center center',
+        start:'15% top',
+        end: '20% top',
         scrub:'true',
         markers:true,
     }
@@ -80,7 +81,7 @@ tl2.to('#hero',{
 
 tl2.from('#second h2',{
     opacity:'0',
-    y:150,
+    y:100,
 },'<')
 
 
