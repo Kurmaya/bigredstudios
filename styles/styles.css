@@ -29,7 +29,7 @@ body{
 }
 .hero-scroll-text{
     position: absolute;
-    left:50%;
+    left:80%;
     top:10%;
     z-index: 2;
     display: flex;
@@ -59,7 +59,7 @@ nav{
 }
 .logo{
     width: 80px;
-    height: 80px;
+    height: 65px;
     position: relative;
 }
 .logo img{
@@ -106,6 +106,8 @@ section{
     position: relative;
     margin: auto;
     padding: 1rem;
+    /* background: black; */
+    
 }
 .section-heading{
     font-size: 10rem;
@@ -123,12 +125,22 @@ section{
 }
 #hero{
     height: 200vh;
+    /* position: fixed; */
+    /* top:0; */
+    /* z-index: -1; */
 }
+.smooth-wrapper.done{
+    position: relative;
+}
+/* #hero .wrapper{
+    position: fixed;
+    top:0;
+} */
 #hero img{
     width: 200px;
     height: 210px;
     /* background: white; */
-    position: absolute;
+    position: fixed!important;
     border:none;
     object-fit: cover;
 }
@@ -137,13 +149,13 @@ section{
 }
 .b-one{
     top:30%;
-    left:15%;
+    left:25%;
     background: red!important;
     width: 300px!important;
 }
 .b-two{
     left:35%;
-    top:45%;
+    top:25%;
     background: green!important;
     height: 300px!important;
     /* width: 400px!important; */
@@ -187,25 +199,89 @@ section{
     height: 100%;
     position: relative;
     gap:20px;
+    transform-style: preserve-3d;
+    z-index: 0;
 }
 .film{
     flex-direction: column;
     width: 100%;
     height: 400px;
-    position: relative;
+    position: relative!important;
     justify-content: center;
     align-items: center;
     /* border:2px solid red; */
     /* border-radius: 10px; */
     margin: auto;
+    position: relative;
+    /* z-index: 2; */
+    backface-visibility: hidden!important;
+    transition: .5s ease;
+    /* transform-style: preserve-3d; */
+    /* transform: translateZ(-100px); */
 }
+.film-wrapper{
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+
+}
+.film-wrapper.active{
+    /* transform: rotateY(180deg); */
+}
+.film-wrapper.active .film-back{
+    transform: rotateY(0deg);
+}
+.film-wrapper.active .film{
+    transform: rotateY(180deg);
+    /* height: auto; */
+}
+
+.film-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    z-index: 5;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    opacity: 1;
+    border:2px solid red;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: .5s ease;
+    top:0;
+}
+.film-content h2,.film-content h3{
+    position: relative!important;
+    top:30px!important;
+    left:0!important;
+}
+
+.film-content p{
+    margin:20px auto;
+    width: 65%;
+}
+.film-content{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    gap:20px;
+    cursor: pointer;
+}
+
 .film img{
 position: relative;
 width: 100%;
 height: 100%;
 object-fit: cover;
 object-position: 50% 25%;
+backface-visibility: hidden;
+/* z-index: 0; */
 }
+
 .film h2{
     color:white;
     position: absolute;
@@ -230,6 +306,7 @@ object-position: 50% 25%;
     position: absolute;
     top:65%;
     transform: translateY(-65%);
+    backface-visibility: hidden;
 }
 
 /* services section */
@@ -240,10 +317,11 @@ object-position: 50% 25%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* gap:20px 0; */
+    gap:20px 0;
 }
 .red{
-    /* color:rgba(150,0,0,1); */
+    
+    color:rgb(255, 88, 88);
 }
 .service{
     grid-template-columns: repeat(2,1fr);
@@ -258,6 +336,7 @@ object-position: 50% 25%;
     max-height: 500px;
     text-align: left;
     position: relative;
+    margin:auto;
 }
 .left img{
     position: absolute;
