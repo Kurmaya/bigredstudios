@@ -31,7 +31,7 @@ let tl = gsap.timeline({
         end:'bottom bottom',
         pin:true,
         pinSpacing:false,
-        markers:true,
+        // markers:true,
         scrub: true,
         ease:'power1.out',
    
