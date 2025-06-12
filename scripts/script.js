@@ -1,9 +1,44 @@
-gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText);
 const filmImages = document.querySelectorAll('.film img');
 const filmHolders = document.querySelectorAll('.film-wrapper');
 const filmBacks = document.querySelectorAll('.film-back');
+const y = document.querySelector('.cYear');
+const targets = document.querySelectorAll('.split');
+let splitWords = new SplitText(document.querySelector('#second h2'),{type:'lines'});
+let words = splitWords.lines;
 
+gsap.from(words,{
+    y:10,
+    opacity:0,
+    stagger:0.05,
+    ease:'none',
+    scrollTrigger:{
+        trigger:'#second',
+        start:'top 50%',
+    }
+})
 
+targets.forEach(target=>{
+let splitText = new SplitText(target,{type:'words,chars'});
+let chars = splitText.chars;
+gsap.from(chars,{
+    y:10,
+    opacity:0,
+    stagger:.2,
+    rotate:10,
+    ease:'none',
+    scrollTrigger:{
+        trigger:target,
+        scrub:true,
+        start:'top bottom',
+        end:'top 20%',
+        // markers:true
+    }
+})
+
+})
+
+y.textContent= new Date().getFullYear();
 
 
 filmHolders.forEach(h=>{
@@ -38,13 +73,14 @@ let tl = gsap.timeline({
 
     }
 })
-tl.to('.hero-scroll-text',{
-    left:'-160%',
-    ease:'none',
-})
 tl.to('.red',{
     color:'red',
+})
+tl.to('.hero-scroll-text',{
+    left:'-90%',
+    ease:'none',
 },'<')
+
 tl.to('.b-one',{
     top:'10%',
     left:'35%',
@@ -85,10 +121,7 @@ tl2.from('#second .wrapper button',{
     y:250,
     // opacity:'0',
 })
-tl2.from('#second h2',{
-    opacity:'0',
-    y:250,
-},'<')
+
 tl2.to('#hero',{
     opacity:'0',
 },'<')
