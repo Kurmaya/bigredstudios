@@ -77,7 +77,7 @@ tl.to('.red',{
     color:'red',
 })
 tl.to('.hero-scroll-text',{
-    left:'-90%',
+    left:'-120%',
     ease:'none',
 },'<')
 
@@ -117,14 +117,11 @@ let tl2 = gsap.timeline({
     }
 })
 
-tl2.from('#second .wrapper button',{
-    y:250,
-    // opacity:'0',
-})
+
 
 tl2.to('#hero',{
     opacity:'0',
-},'<')
+})
 
 
 filmImages.forEach(film=>{
