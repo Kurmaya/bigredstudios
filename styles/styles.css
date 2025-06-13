@@ -465,6 +465,7 @@ text-align: left;
     grid-template-columns: repeat(2,1fr);
     height: 650px;
     margin:20px auto;
+    letter-spacing: 2px;
 }
 .film-left,.film-right{
     width: 100%;
