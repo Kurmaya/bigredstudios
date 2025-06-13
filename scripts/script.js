@@ -182,15 +182,18 @@ gsap.from(film,{
     
 })
 const services= document.querySelectorAll('.service');
-
+ 
 services.forEach((s,i)=>{
-    ScrollTrigger.create({
+   if(window.innerWidth>1000){
+          ScrollTrigger.create({
         trigger:s,
         start:'-15% top',
         scrub:true,
         pin:true,
         pinSpacing:false,
     })
+    }
+  
 })
 
 ScrollTrigger.create({

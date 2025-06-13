@@ -555,7 +555,7 @@ form input{
 input[name="message"],textarea{
     width: 100%;
     border-radius: 10px;
-    height: 200px;
+    height: 150px;
     padding:0!important;
 }
 input[name="message"]::placeholder{
@@ -706,4 +706,217 @@ object-fit: cover;
     top:100px;
     letter-spacing: 2px;
     line-height: 1.5;
+}
+
+@media screen and (min-width:280px) and (max-width:520px) {
+    #contact,#about{
+    height: 100%!important;
+}
+    section{
+        width: 100%;
+    }
+    #spacer{
+        height:40vh;
+        display: none;
+    }
+    .logo{
+        z-index: 10;
+        margin:0 auto;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    .close{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-bar > *{
+
+        transition: .3s ease;
+    }
+    .nav-bar.active{
+        width: 100%;
+        flex-direction: column;
+    }
+    .links{
+        height: 100vh;
+        position: absolute;
+        left:-100%;
+      width: 100%;
+        
+    }
+    .nav-bar.active .links{
+        left:0;
+          display: flex;
+        flex-direction: column;
+    }
+    .nav-bar.active .links ul{
+        flex-direction: column;
+        height: 100%;
+        /* margin: auto; */
+        justify-content: center;
+        align-items: center;
+    }
+    .links ul li{
+        font-size: 2rem;
+    }
+    #hero{
+        height: 200vh!important;
+    }
+    .hero-scroll-text,h1{
+        font-size: 8rem;
+        top:25%;
+        letter-spacing: 5px;
+    }
+    #hero img{
+        z-index: 0;
+    }
+    #second h2{
+        font-size: 2.3rem;
+        /* top:0; */
+    }
+    #second h3{
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    #second button{
+        bottom:30px;
+    }
+    .section-heading{
+        font-size: 3rem;
+    }
+    .one{
+        width: 200px!important;
+        height: 200px!important;
+    }
+    .two{
+        height: 150px!important;
+        left:5%!important;
+    }
+    .b-one{
+        width: 150px!important;
+    }
+    .b-two{
+        height: 200px!important;
+        top:65%;
+        left:0;
+    }
+    .film{
+        height:500px;
+    }
+    .film h2{
+        font-size: 1.5rem;
+    }
+    .film h3{
+        font-size: 1rem;
+        right:auto;
+        width: 80%;
+    }
+    .film-desc{
+        font-size: .85rem;
+    }
+    .film-desc p{
+        width: 90%;
+        
+    }
+    button{
+        margin:0;
+    }
+    .film-content button{
+top:81%;
+font-size: 1rem;
+/* height: ; */
+margin: 10px auto;
+    }
+    #services{
+        height: 100%;
+    }
+    .service{
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: none;
+        gap:0;
+    }
+    .left,.right{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .left{
+        position: relative;
+    }
+    .right{
+        order:1;
+        text-align: center;
+        padding:2rem 1rem;
+        height:max-content;
+    }
+    .right ul{
+        flex-wrap: wrap;
+        gap:10px;
+        margin:auto auto auto 20px;
+    }
+    .right h2{
+font-size: 2rem;
+    }
+.right h4{
+    font-size: 1.2rem;
+    width: 100%;
+}
+.ticker-text h2{
+    font-size: 5rem;
+}
+.cta {
+    margin:50px auto;
+}
+.cta:hover{
+    color:black;
+
+}
+#first{
+    /* height: 50vh; */
+}
+
+#first h2,.branding{
+    font-size: 3rem!important;
+}
+form{
+    width: 100%;
+}
+.film-wrap,.work-cont,.about-wrapper{
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.about-wrapper,.about-desc,.about-wrapper h3{
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    text-align: center;
+}
+.alter{
+    font-size: 3rem;
+    margin:20px auto;
+}
+.film-left{
+    height: 400px;
+}
+.film-right{
+    padding:1rem;
+ height: max-content;
+ gap:20px;
+}
+.film-right h2{
+    font-size: 2rem;
+}
+
+.film-right button{
+    margin:auto;
+}
+.desc p{
+    width: 95%;
+    
+}
 }
