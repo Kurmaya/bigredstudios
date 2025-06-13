@@ -148,7 +148,24 @@ tl2.to('#hero',{
 
 
 filmImages.forEach(film=>{
-    gsap.from(film,{
+    if(film.classList.contains('fowl')){
+        // console.log(film);
+         gsap.from(film,{
+        objectPosition:'50% 80%',
+        opacity:'.8',
+        scale:'.95',
+        scrollTrigger:{
+            trigger:film,
+            start:'-80% 20%',
+            end: '-50% top',
+            scrub:true,
+            ease:'none',
+            // markers:true
+        }
+    })
+    }
+    else{
+gsap.from(film,{
         objectPosition:'50% +=5%',
         opacity:'.8',
         // scale:'.95',
@@ -161,6 +178,8 @@ filmImages.forEach(film=>{
             // markers:true
         }
     })
+    }
+    
 })
 const services= document.querySelectorAll('.service');
 
