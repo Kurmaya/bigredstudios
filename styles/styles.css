@@ -252,7 +252,7 @@ section{
     place-items: center;
 }
 /* film section  */
-#films,#branding{
+#films,#branding,#websites{
     height: 100%;
 }
 .film-holder{
@@ -469,6 +469,7 @@ text-align: left;
 .branding{
     font-size: 10rem!important;
 }
+
 #first h2{
     color: white;
     font-size: 12rem;
