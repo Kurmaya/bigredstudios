@@ -2,21 +2,39 @@ gsap.registerPlugin(ScrollTrigger,ScrollSmoother,SplitText);
 const filmImages = document.querySelectorAll('.film img');
 const filmHolders = document.querySelectorAll('.film-wrapper');
 const filmBacks = document.querySelectorAll('.film-back');
-const y = document.querySelector('.cYear');
 const targets = document.querySelectorAll('.split');
-let splitWords = new SplitText(document.querySelector('#second h2'),{type:'lines'});
-let words = splitWords.lines;
+const splitTexts = document.querySelectorAll('.split-text');
 
+
+
+splitTexts.forEach((text,i)=>{
+let splitWords = new SplitText(text,{type:'words,lines'});
+let words = splitWords.words;
+if(i == 2){
+    words= splitWords.lines;
+}
+else {
+  words= splitWords.words;  
+}
 gsap.from(words,{
-    y:10,
+    y:30,
+    rotateX:'80deg',
     opacity:0,
-    stagger:0.05,
-    ease:'none',
+    stagger:0.2,
+    ease:'back.out',
+    
     scrollTrigger:{
         trigger:'#second',
-        start:'top 50%',
+        start:'top 40%',
+        end:'70% 80%',
+        scrub:true,
+        // markers:true
     }
 })
+
+})
+
+
 
 targets.forEach(target=>{
 let splitText = new SplitText(target,{type:'words,chars'});
@@ -38,7 +56,7 @@ gsap.from(chars,{
 
 })
 
-y.textContent= new Date().getFullYear();
+
 
 
 filmHolders.forEach(h=>{
@@ -109,9 +127,9 @@ tl.to('.f-two',{
 
 let tl2 = gsap.timeline({
     scrollTrigger:{
-        tigger:'#second',
-        start:'15% top',
-        end: '20% top',
+        trigger:'#content2',
+        start:'top 90%',
+        end: 'center 100%',
         scrub:'true',
         // markers:true,
     }
@@ -122,6 +140,11 @@ let tl2 = gsap.timeline({
 tl2.to('#hero',{
     opacity:'0',
 })
+
+// tl2.from('#second button',{
+//     opacity:'0',
+//     y:150,
+// },'<')
 
 
 filmImages.forEach(film=>{
@@ -153,6 +176,6 @@ services.forEach((s,i)=>{
 
 ScrollTrigger.create({
     trigger:'#services',
-    start:'top top',
-    end:"+=" + 100 *(services.length -1) + "%"
+    start:'top 90%',
+    end:"+=" + 50 *(services.length -1) + "%"
 })

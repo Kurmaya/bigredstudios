@@ -1,3 +1,10 @@
+const nav = document.querySelector('.nav-bar');
+const close = document.querySelector('.close');
+
+close.addEventListener('click',()=>{
+    nav.classList.toggle('active');
+})
+
 document.addEventListener('DOMContentLoaded',()=>{
         const tick = document.querySelector('.cta');
         const inner = tick.querySelector('.ticker-wrap');
@@ -14,3 +21,6 @@ const animation = gsap.to(ticker,{
 })
         })
     })
+
+    const y = document.querySelector('.cYear');
+y.textContent= new Date().getFullYear();
