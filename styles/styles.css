@@ -55,6 +55,7 @@ body{
     align-items: center;
     z-index: 10;
     cursor: pointer;
+    display: none;
 
 }
 .bar{
@@ -141,7 +142,7 @@ section{
     width: 90%;
     height: 100vh;
     position: relative;
-    margin:40px auto;
+    margin:auto;
     padding: 1rem;
     /* background: black; */
     
@@ -225,17 +226,27 @@ section{
     opacity: 1;
     font-weight: 400;
     font-size: 5rem;
+    position: relative;
+    top:30px;
 }
 #second span{
     font-size: 1rem;
     position: relative;
-    /* left:30%;
-    bottom:20px; */
+    left:24%;
+    /* top:10px; */
 }
 #second h3{
     font-size: 2rem;
     letter-spacing: 2px;
     font-weight: 100;
+}
+#second button{
+    margin:auto auto 150px auto;
+    /* bottom:50px; */
+}
+#second .wrapper{
+    display: grid;
+    place-items: center;
 }
 /* film section  */
 #films{
@@ -571,6 +582,7 @@ footer p{
     justify-content: center;
     align-items: center;
     margin: auto;
+    display: none;
 }
 .cta{
     display: flex;
